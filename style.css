@@ -1,3 +1,7 @@
+:root {
+    font-size: 10px
+}
+
 .sidebar {
   flex-basis: 20%;
   height: 80vh;
@@ -48,15 +52,14 @@
   padding: 3%;
 }
 
-.main {
-    order: 2;
+.content {
+    font-size: 1.6rem;
 }
 
 body {
   padding: 0;
   margin: 0;
   background-color: #eeeeee;
-  font-size: 16px;
   box-sizing: border-box;
   font-family: Lato, sans-serif;
 }
@@ -64,4 +67,18 @@ body {
 a {
     text-decoration: none;
     color: #398082;
+}
+
+.inner-list {
+    margin-bottom: 15px;
+}
+
+ul li {
+    list-style: none;
+    font-size: 1.6rem;
+}
+
+table {
+    background-color: white;
+    width: 100%;
 }

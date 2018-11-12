@@ -16,57 +16,308 @@
     <div class="wrapper">
         <div class="sidebar">
             <ul>
-                <li><a href="">Introduction</a></li>
-                <li><a href="">Hero Section</a></li>
+                <li><a href="#intro">Introduction</a></li>
+                <li><a href="#hero">Hero Section</a></li>
                 <ul class="inner-list">
-                    <li><a href="">HTML (structure)</a></li>
-                    <li><a href="">CSS (style)</a></li>
+                    <li><a href="#herohtml">HTML (structure)</a></li>
+                    <li><a href="#herocss">CSS (style)</a></li>
                 </ul>
-                <li><a href="">Three Column Layout</a></li>
+                <li><a href="#threecol">Three Column Layout</a></li>
                 <ul class="inner-list">
-                    <li><a href="">HTML (structure)</a></li>
-                    <li><a href="">CSS (style)</a></li>
+                    <li><a href="#threecolhtml">HTML (structure)</a></li>
+                    <li><a href="#threecolcss">CSS (style)</a></li>
+                </ul>
+                <li><a href="#footerlesson">Footer</a></li>
+                <ul class="inner-list">
+                    <li><a href="#footerhtml">HTML (structure)</a></li>
+                    <li><a href="#footercss">CSS (style)</a></li>
+                </ul>
+                <li><a href="#extras">Extras</a></li>
+                <ul class="inner-list">
+                    <li><a href="#extra1">Main Content Area</a></li>
+                    <li><a href="#extra2">Images in Features</a></li>
+                    <li><a href="#extra3">More Items in Footer</a></li>
                 </ul>
             </ul>
         </div>
         <div class="main">
             <div class="introduction content">
-                <h2>Introduction</h2>
+                <h2 id="intro">Introduction</h2>
                 <p>Every website you visit is made using three basic languages: HTML, CSS, and (most of the time) JavaScript.</p>
                 <p>HTML is the structure of the page. CSS is the style of the page, and JavaScript handles the user interactions (ie - what happens if I click on this?</p>
                 <h4>What We're Doing Today</h4>
                 <p>We will construct a basic structure for our page using HTML and style the elemnts using CSS. We will not be using JavaScript today.</p>
             </div>
             <div class="hero-section content">
-                <h2>Hero Section</h2>
+                <h2 id="hero">Hero Section</h2>
                 <p>The "hero section" of a website is the first thing that the user will see. It's usually a large banner image or pattern centered on the top of the page.</p>
-                <h4>The HTML (Structure)</h4>
+                <h4 id="herohtml">Hero Section HTML (Structure)</h4>
                 <ol>
                     <li>Add a div and give it a class of "hero"</li>
                     <li>Inside the div, add an h1 tag with the title of yourself, your website, or your product</li>
                 </ol>
-                <p>Your final HTML should look like this: </p>
+                <p>Stuck? Check out our example below:</p>
                 <p data-height="265" data-theme-id="0" data-slug-hash="yQaqxZ" data-default-tab="html,result" data-user="rwarbelow"
                     data-pen-title="Hero Section HTML" class="codepen">See the Pen <a href="https://codepen.io/rwarbelow/pen/yQaqxZ/">Hero
                         Section HTML</a> by Rachel Warbelow (<a href="https://codepen.io/rwarbelow">@rwarbelow</a>) on <a href="https://codepen.io">CodePen</a>.</p>
                 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
-                <h4>The CSS (Style)</h4>
+                <h4 id="herocss">Hero Section CSS (Style)</h4>
+                <p>There are many different CSS properties that we'll use to style this hero section. First, click on your CSS tab and create a container where you'll style the .hero class:</p>
+                <pre><code>
+.hero {
+
+}
+                </code></pre>
+                <p>Inside of the two curly braces, you'll add the following properties each on a separate line with a semicolon at the end.</p>
                 <table>
                     <tr>
-                        <td><pre><code>display: flex;</code></pre></td>
-                        <td>asdf</td>
+                        <td>
+                            <pre><code>display: flex;</code></pre>
+                        </td>
+                        <td>Allows an item (in this case, the .hero div) to take up as much space as needed</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <pre><code>background-image: url("");</code></pre>
+                        </td>
+                        <td>Find an image on Unsplash that you like and put the web address for that image inside the empty quotation marks.</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <pre><code>background-size: cover;</code></pre>
+                        </td>
+                        <td>This will display your background image to cover the positioning area (the entire webpage in this example) while preserving the image proportions.</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <pre><code>background-position: center center;</code></pre>
+                        </td>
+                        <td>This will make the image centered vertically and horizontally. Try changing the first "center" to either "top" or "bottom" to see what happens.</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <pre><code>height: 80vh;</code></pre>
+                        </td>
+                        <td>vh means "viewport height" which represents how much of the page the user can see at one time. By saying 80vh, we're specifying that we want our image to cover 80% of the viewport height.</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <pre><code>justify-content: center;</code></pre>
+                        </td>
+                        <td>This specifies that we want our heading centered horizontally over the image.</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <pre><code>align-items: center;</code></pre>
+                        </td>
+                        <td>This specifies that we want our heading centered vertically over the image.</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <pre><code>color: white;</code></pre>
+                        </td>
+                        <td>Color always refers to text color, not background. I have chosen white, but feel free to experiment with  <a href="http://colours.neilorangepeel.com/">other colors</a>.</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <pre><code>text-shadow: black 4px 4px 20px;</code></pre>
+                        </td>
+                        <td>Adding a shadow to your text can sometimes make it easier to read. Experiment with changing the 4, 4, and 20 to see what they control.</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <pre><code>font-size: 24px;</code></pre>
+                        </td>
+                        <td>px means pixels. This line will change the font size for anything in our .hero div (in this case, the heading). I've chosen a font size of 24 pixels, but you can experiment with other font sizes.</td>
                     </tr>
                     
                 </table>
-                
-                <p>sdflkjsl</p>
-                    
+                                
+                <p>Stuck? Check out our example below:</p>
                 <p data-height="265" data-theme-id="0" data-slug-hash="aQmKgX" data-default-tab="html,result" data-user="rwarbelow"
                     data-pen-title="Step 1: Hero Heading" class="codepen">See the Pen <a href="https://codepen.io/rwarbelow/pen/aQmKgX/">Step
                         1: Hero Heading</a> by Rachel Warbelow (<a href="https://codepen.io/rwarbelow">@rwarbelow</a>) on <a href="https://codepen.io">CodePen</a>.</p>
                 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
             </div>
+            <div class="three-column-section content">
+                <h2 id="threecol">Three Column Layout for Features</h2>
+                <p>Next, we'll add text content below our hero section. Ultimately, we want three columns, each containing a small heading for a feature and a paragraph of text. Since the heading and text belong together, we'll group each of them with a div, then style that div.</p>
+                <h4 id="threecolhtml">Three Column Layout HTML (Structure)</h4>
+                <ol>
+                    <li>Create a div that has a class of "container"</li>
+                    <li>Inside of the container div, create another div that has the class of "features"</li>
+                    <li>Inside of features, create *three* separate divs that have the classes of feature-one, feature-two, and feature-three</li>
+                    <li>For each feature, add a small heading (like an h3) and a paragraph (p)</li>
+                </ol>
+                <p>Stuck? Check out our example below:</p>
+                <p data-height="265" data-theme-id="0" data-slug-hash="jQVaJv" data-default-tab="html,result" data-user="rwarbelow"
+                    data-pen-title="Three Column HTML " class="codepen">See the Pen <a href="https://codepen.io/rwarbelow/pen/jQVaJv/">Three
+                        Column HTML </a> by Rachel Warbelow (<a href="https://codepen.io/rwarbelow">@rwarbelow</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+                <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+                <h4 id="threecolcss">Three Column Layout CSS (Style)</h4>
+                <p>We'll again use display: flex; to make it so that our individual features are lined up on the page and flexing to take up space evenly.</p>
+                <p>First, we're going to make our features div display flex, in addition to giving it a property that we'll see the effect of later. In your CSS, add:</p>
+                <pre><code>
+.features {
+    display: flex;
+    justify-content: space-between;
+}
+</code></pre>
+                <p>Next, let's style each of our features. Create the skeletons for each of them in your CSS like this: </p>
+                <pre><code>
+.feature-one {
+
+}
+
+.feature-two {
+
+}
+
+.feature-three {
+
+}
+</code></pre>
+                <p>Inside *each* of these containers, we'll add three properties and values:</p>
+                <table>
+                    <tr>
+                        <td>
+                            <pre><code>flex-basis: 28%;</code></pre>
+                        </td>
+                        <td>flex-basis specifies the width of the element. In this case, we're saying that we want each of the features to be 28% of the full width of the container.</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <pre><code>padding: 15px;</code></pre>
+                        </td>
+                        <td>Padding adds space between the text and the edge of the element. By adding padding, it will make it so that the words aren't pressed right up against the edge of the next element. Feel free to experiment with the amount of padding.</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <pre><code>background-color: rgba(241,144,45, 0.2);</code></pre>
+                        </td>
+                        <td>We're giving each box a background-color. rgba is a fancy way to specify colors, where the first number, 241, represents how much red, the second number, 144, represents how much gree, and the thid number, 45, represents how much blue. The decimal, 0.2, represents how transparent the color is. Free free to experiment with your own numbers to produce different colors. You can also visit <a href="https://www.ginifab.com/feeds/pms/color_picker_from_image.php">this website</a>, which will allow you to pick colors from the hero image you used earlier.</td>
+                    </tr>
+
+                </table>
+                <p>Stuck? Check out our example below:</p>
+                <p data-height="265" data-theme-id="0" data-slug-hash="aQBqow" data-default-tab="css,result" data-user="rwarbelow"
+                    data-pen-title="Three Column CSS " class="codepen">See the Pen <a href="https://codepen.io/rwarbelow/pen/aQBqow/">Three
+                        Column CSS </a> by Rachel Warbelow (<a href="https://codepen.io/rwarbelow">@rwarbelow</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+                <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+            </div>
+            <div class="content">
+                <h2 id="footerlesson">Footer</h2>
+                <p>We'll make a very simple footer that includes an SVG icon and a link.</p>
+                <h4 id="footerhtml">Footer HTML (Structure)</h4>
+                <p>Scroll to the very bottom of your HTML, and find the last two closing div tags. They look like this:</p>
+<pre><code>
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+                <p>The first tag closes our features div, and the second one closes our container div. We want our footer to be outside of the features, but still inside the container.</p> 
+                <p>Between those two tags, do the following:</p>
+                <ol>
+                    <li>Add a div and give it a class of "footer"</li>
+                    <li>Within the footer div, create another div with the class of "contact"</li>
+                    <li>Click on "assets", then click "icons", and click on an icon you want to represent contacting you. This will copy that code to your clipboard</li>
+                    <li>Paste what was copied into the contact div. It will look pretty messy, but it will work</li>
+                    <li>Directly under the SVG, create a link to email yourself, like this: </li>
+                </ol>
+                <pre><code>
+&lt;a href="mailto:rachel@girldevelopit.com"&gt;Contact Me&lt;/a&gt;
+                </code></pre>
+                <p>Be sure to change the email address to your own.</p>
+                <p>Stuck? Check out our example below:</p>
+                <p data-height="265" data-theme-id="0" data-slug-hash="bQBLjE" data-default-tab="html,result" data-user="rwarbelow"
+                    data-pen-title="Footer HTML" class="codepen">See the Pen <a href="https://codepen.io/rwarbelow/pen/bQBLjE/">Footer
+                        HTML</a> by Rachel Warbelow (<a href="https://codepen.io/rwarbelow">@rwarbelow</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+                <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+                <h4 id="footercss">Footer CSS (Style)</h4>
+                <p>We want to center our icon and link, in addition to removing the default underline from our link. First, in your CSS tab on CodePen, create two containers for the style of our footer and the style of our link:</p>
+                <pre><code>
+.footer {
+
+}
+
+
+a {
+
+}</code></pre>
+                <p>Inside of the two curly braces for footer, you'll add the following properties each on a separate line with a semicolon at
+                    the end.</p>
+                <table>
+                    <tr>
+                        <td>
+                            <pre><code>margin-top: 20px;</code></pre>
+                        </td>
+                        <td>This will add space above the footer so that it doesn't look like it's pressed up against the three column feature layout.</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <pre><code>display: flex;</code></pre>
+                        </td>
+                        <td>Just like before, this will allow us to easily center our footer item. If we add more footer items, they'll each nicely lay up against each other in the same row.</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <pre><code>justify-content: space-around;</code></pre>
+                        </td>
+                        <td>This will make each element inside the footer have an equal amount of space around it. In our case, we only have one, so it will center the item. </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <pre><code>margin-bottom: 25px;</code></pre>
+                        </td>
+                        <td>Adding margin on bottom will make it so that the content is not up against the bottom of the scren.</td>
+                    </tr>
+                </table>
+                <p>Inside of the two curly braces for link (the a tag), you'll add the following properties each on a separate line with a
+                    semicolon at
+                    the end.</p>
+                <table>
+                    <tr>
+                        <td>
+                            <pre><code>text-decoration: none;</code></pre>
+                        </td>
+                        <td>If you don't like that default underline, this is how you get rid of it.</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <pre><code>color: rgba(83,122,49, 1);</code></pre>
+                        </td>
+                        <td>I'm not a huge fan of the default blue links. This is how you'll change the color. Feel free to experiment with different colors.</td>
+                    </tr>
+                </table>
             
+                <p>Stuck? Check out our example below:</p>
+                <p data-height="265" data-theme-id="0" data-slug-hash="wQomKo" data-default-tab="css,result" data-user="rwarbelow"
+                    data-pen-title="Footer CSS" class="codepen">See the Pen <a href="https://codepen.io/rwarbelow/pen/wQomKo/">Footer
+                        CSS</a> by Rachel Warbelow (<a href="https://codepen.io/rwarbelow">@rwarbelow</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+                <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+            </div>
+            <div class="extras content">
+                <h2 id="extras">Extras</h2>
+                <p>Want more? Here are a few ideas you can use to jumpstart the next steps for your website.</p>
+                <h4 id="extra1">Main Content Area</h4>
+                <p>Can you figure out how to add a content area between the features and the footer? Look at the example below: </p>
+                <p data-height="265" data-theme-id="0" data-slug-hash="LXbXxK" data-default-tab="html,result" data-user="rwarbelow"
+                    data-pen-title="Extras: Main Content Area" class="codepen">See the Pen <a href="https://codepen.io/rwarbelow/pen/LXbXxK/">Extras:
+                        Main Content Area</a> by Rachel Warbelow (<a href="https://codepen.io/rwarbelow">@rwarbelow</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+                <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+                
+                <h4 id="extra2">Images in Features</h4>
+                <p>Can you add small images below the headings for each feature? Look at the example below:</p>
+                <p data-height="265" data-theme-id="0" data-slug-hash="xQRQqB" data-default-tab="html,result" data-user="rwarbelow"
+                    data-pen-title="Extras: Feature Images" class="codepen">See the Pen <a href="https://codepen.io/rwarbelow/pen/xQRQqB/">Extras:
+                        Feature Images</a> by Rachel Warbelow (<a href="https://codepen.io/rwarbelow">@rwarbelow</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+                <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+                <h4 id="extra3">More Footer Links</h4>
+                <p>Can you add one or two more icons and links to your footer?Take a look at the example below: </p>
+                <p data-height="265" data-theme-id="0" data-slug-hash="NEbEav" data-default-tab="html,result" data-user="rwarbelow"
+                    data-pen-title="Extras: More Footer Links" class="codepen">See the Pen <a href="https://codepen.io/rwarbelow/pen/NEbEav/">Extras:
+                        More Footer Links</a> by Rachel Warbelow (<a href="https://codepen.io/rwarbelow">@rwarbelow</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+                <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+            </div>
         </div>
     </div>
 </body>

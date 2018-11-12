@@ -86,8 +86,18 @@ ul li {
 table {
     background-color: white;
     width: 100%;
+    border-collapse:separate; 
+    border-spacing: 0 1em;
 }
 
-.main h1, h2, h3, h4 {
+.main h1, h2, h3 {
     color: #F05B62;
+}
+
+pre code {
+    /* font-weight: bold; */
+}
+
+h4 {
+    color: rgb(220,136,82);
 }
